@@ -1,0 +1,776 @@
+-- 1. write a program to display addition of numbers
+
+DECLARE
+num1 NUMBER;
+num2 NUMBER;
+num3 NUMBER;
+
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Welcome to addition operation!');
+num1 := '&Enter_your_first_number:';
+num2 := '&Enter_your_second_number:';
+num3 := (num1 + num2);
+DBMS_OUTPUT.PUT_LINE('Addition of '|| num1 || 'and' || num2 || 'is' || num3);
+
+END;
+/
+
+-- 2. Write a program for multiplication, division and subtraction of two numbers.
+
+DECLARE
+num1 NUMBER;
+num2 NUMBER;
+num3 NUMBER;
+
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Welcome to multiplication, division and subtraction operation!');
+num1 := '&Enter_your_first_number:';
+num2 := '&Enter_your_second_number:';
+num3 := (num1 * num2);
+DBMS_OUTPUT.PUT_LINE('When '|| num1 ||' is multiplied with'|| num2 ||'the product is'|| num3);
+num3 := (num1 / num2);
+DBMS_OUTPUT.PUT_LINE('When '|| num1 ||' is divided by'|| num2 ||'the quotient is'|| num3);
+num4 := (num1 - num2);
+DBMS_OUTPUT.PUT_LINE('Subtraction of '|| num1 ||' and '|| num2 ||' is '|| num3);
+
+END;
+/
+
+-- 3. Write a program to find area of square and area of rectangle
+
+DECLARE
+sideOfSquare NUMBER;
+lengthOfRectangle NUMBER;
+breadthOfRectangle NUMBER;
+areaOfSquare NUMBER;
+areaOfRectangle;
+
+BEGIN
+sideOfSquare := '&Enter_the_length_of_the_side_of_your_square:';
+lengthOfRectangle := '&Enter_the_length_of_your_rectangle:';
+breadthOfRectangle := '&Enter_the_breadth_of_your_rectangle:';
+areaOfSquare := sideOfSquare * sideOfSquare;
+areaOfRectangle := length * breadth;
+DBMS_OUTPUT.PUT_LINE('Area of square with side'|| sideOfSquare ||' units is'|| areaOfSquare);
+DBMS_OUTPUT.PUT_LINE('Area of rectangle is'|| areaOfRectangle);
+
+END;
+/
+
+-- 4. Write a program to find diameter, area and circumference of circle
+
+DECLARE
+radius NUMBER;
+diameter NUMBER;
+areaOfCircle NUMBER;
+circumference NUMBER;
+
+BEGIN
+radius := '&Enter_the_radius_of_your_circle:';
+diameter := (radius * 2);
+DBMS_OUTPUT.PUT_LINE('Diameter of your circle is:'|| diameter);
+areaOfCircle := (3.14 * radius * radius);
+DBMS_OUTPUT.PUT_LINE('Area of circle is'|| areaOfCircle);
+circumference := (2 * 3.14 * radius);
+DBMS_OUTPUT.PUT_LINE('Circumference of circle is', circumference);
+
+END;
+/
+
+-- 5. Perform multiple operations
+
+DECLARE
+num1 NUMBER;
+num2 NUMBER;
+num3 NUMBER;
+num4 NUMBER;
+operation1 NUMBER;
+operation2 NUMBER;
+solution NUMBER;
+
+BEGIN
+num1 := '&Enter_num1_value:';
+num2 := '&Enter_num2_value:';
+num3 := '&Enter_num3_value:';
+num4 := '&Enter_num4_value:';
+operation1 := (num1 + num2);
+operation2 := (num4 - num3);
+solution := (operation1 * c * operation2);
+DBMS_OUTPUT.PUT_LINE('The processed output is'|| solution);
+
+END;
+/
+
+-- 6. Take input from user for 4 numbers and give out the summation of their two's.
+
+DECLARE
+a NUMBER := &a;
+b NUMBER := &b;
+c NUMBER := &c;
+d NUMBER := &d;
+multiplied_by NUMBER := &multiplied_by;
+solution NUMBER;
+
+BEGIN
+a := (a*multiplied_by);
+b := (b*multiplied_by);
+c := (c*multiplied_by);
+d := (d*multiplied_by);
+solution := (a + b + c + d);
+DBMS_OUTPUT.PUT_LINE('Addition of the two's of the given number is'|| solution);
+
+END;
+/
+
+-- 7. Find area of triangle
+
+DECLARE
+base NUMBER := &base;
+height NUMBER := &height;
+areaOfTraingle NUMBER;
+
+BEGIN
+areaOfTriangle := (0.5 * base * height);
+DBMS_OUTPUT.PUT_LINE('Area of your triangle is'|| areaOfTriangle);
+
+END;
+/
+
+-- 8. Find volume of a sphere
+
+DECLARE
+radius NUMBER := &radius;
+height NUMBER := &height;
+volumeOfSphere NUMBER;
+
+BEGIN
+volumeOfSphere := (3.14 * radius * radius * height);
+DBMS_OUTPUT.PUT_LINE('Volume of your sphere is'|| volumeOfSphere);
+
+END;
+/
+
+-- 9. Find area of rhombus, sphere and parallelogram
+
+DECLARE
+d1 NUMBER := &d1;
+d2 NUMBER := &d2;
+areaOfRhombus NUMBER;
+radius NUMBER := &radius;
+areaOfSphere NUMBER;
+base NUMBER := &base;
+height NUMBER := &height;
+areaOfParallelogram NUMBER;
+
+BEGIN
+areaOfRhombus := (0.5 * d1 * d2);
+DBMS_OUTPUT.PUT_LINE('Area of your rhombus is:'|| areaOfRhombus);
+areaOfSphere := (4 * 3.14 * radius * radius);
+DBMS_OUTPUT.PUT_LINE('Area of your sphere is'|| areaOfSphere);
+areaOfParallelogram := (base * height);
+DBMS_OUTPUT.PUT_LINE('Area of your parallelogram is'|| areaOfParallelogram);
+
+END;
+/
+
+-- 10. Write a program to print your name, D.O.B., education, hobbies, strength and weakness
+
+DECLARE
+name VARCHAR(20) := 'Jigar Veera';
+dob DATETIME := '18-05-2006';
+education VARCHAR(30) := 'S.Y. B.Sc. in Data Science';
+strength VARCHAR(20) := 'Non Relation D.B.';
+weakness VARCHAR(20) := 'java Servers and Servlets';
+
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Name :'|| name);
+DBMS_OUTPUT.PUT_LINE('D.O.B. :'|| dob);
+DBMS_OUTPUT.PUT_LINE('Education :'|| education);
+DBMS_OUTPUT.PUT_LINE('Stregnth :'|| strength);
+DBMS_OUTPUT.PUT_LINE('Weakness :' weakness);
+
+END;
+/
+
+-- 11. Use of Constant, single and multi line comment
+
+DECLARE
+pie CONSTANT NUMBER := 3.14;
+
+BEGIN
+-- this is a single line comment
+/*
+These are multiple line comment
+
+These are multiple line comment
+
+These are multiple line comment
+*/
+
+END;
+/
+
+-- 12. if-then conditional statement
+
+DECLARE
+num1 NUMBER := &num1;
+
+BEGIN
+IF num1 = 10 THEN
+DBMS_OUTPUT.PUT_LINE('You have selected the correct value of num1 i.e.'|| num1);
+END IF;
+
+END;
+/
+
+-- 13. if-then-else conditional statement
+
+DECLARE
+num1 NUMBER := &num1;
+
+BEGIN
+IF num1 = 10 THEN
+DBMS_OUTPUT.PUT_LINE('You have selected the correct value of num1 i.e.'|| num1);
+ELSE
+DBMS_OUTPUT.PUT_LINE('You have selected the incorrect value!');
+END IF;
+
+END;
+/
+
+-- 14. if-then-elsif-else conditional statement
+
+DECLARE
+num1 NUMBER := &num1;
+-- there are 2 values of num1 i.e. 10 and 10, if user chooses either one of them it will be display correct else loose!
+
+DECLARE
+num1 NUMBER := &num1;
+
+BEGIN
+IF num1 = 10 THEN
+DBMS_OUTPUT.PUT_LINE('you have selected the correct value');
+ELSIF num1 = 20 THEN
+DBMS_OUTPUT.PUT_LINE('you have selected the correct value');
+ELSE
+DBMS_OUTPUT.PUT_LINE('You loose!');
+END IF;
+
+END;
+/
+
+-- 15. case conditional statement
+
+DECLARE
+select NUMBER := &select;
+
+BEGIN
+CASE select
+WHEN 1 THEN
+DBMS_OUTPUT.PUT_LINE('');
+WHEN 2 THEN
+DBMS_OUTPUT.PUT_LINE('');
+WHEN 3 THEN 
+DBMS_OUTPUT.PUT_LINE('');
+ELSE
+DBMS_OUTPUT.PUT_LINE('');
+END CASE
+
+END;
+/
+
+-- 16. searched case conditional statement
+
+DECLARE
+select VARCHAR(20) := &select;
+
+BEGIN
+CASE
+WHEN select = 'hello' THEN
+DBMS_OUTPUT.PUT_LINE('You have selected the first word');
+WHEN select = 'hey' THEN
+DBMS_OUTPUT.PUT_LINE('You have selected the second word');
+WHEN select = 'hi' THEN
+DBMS_OUTPUT.PUT_LINE('You have selected the third word');
+ELSE
+DBMS_OUTPUT.PUT_LINE('no selections matched');
+END CASE;
+
+END;
+/
+
+-- 17. even or odd
+
+DECLARE
+num1 NUMBER := &num1;
+
+BEGIN
+IF mod(num1,2) = 0 THEN
+DBMS_OUTPUT.PUT_LINE(num1 ||' is an even number.');
+ELSE
+DBMS_OUTPUT.PUT_LINE(num1 ||'is an odd number.');
+END IF;
+
+END;
+/
+
+-- 18. Basic loop
+
+-- print numbers from and till user says
+
+DECLARE
+start1 NUMBER := &start1;
+end1 NUMBER := &end1;
+
+BEGIN
+LOOP
+start1 := start1 + 1;
+DBMS_OUTPUT.PUT_LINE(start1);
+IF start1 = end1 THEN
+EXIT;
+END IF;
+END LOOP;
+
+END;
+/
+
+-- 19 display table of user given number and till whaen he wants the table
+
+DECLARE
+num1 NUMBER;
+multiplied_by NUMBER := 1;
+end1 NUMBER;
+
+BEGIN
+num1 := '&Enter_the_number_of_which_you_want_the_multiplication_table:';
+end1 := '&Enter_tille_where_you_want_the_table:';
+
+LOOP
+product := num1 * multiplied_by;
+DBMS_OUTPUT.PUT_LINE(num1 ||'*'|| multiplied_by ||'='|| product);
+IF num1 = end1 THEN
+EXIT;
+END IF;
+multiplied_by := multiplied_by + 1;
+END LOOP;
+
+END;
+/
+
+-- 20 basic loop with exit when
+
+-- print number from 1 to 20
+
+DECLARE
+num1 NUMBER := &start1;
+end1 NUMBER := &end1;
+
+BEGIN
+LOOP
+DBMS_OUTPUT.PUT_LINE(num1);
+EXIT WHEN num1 = end1;
+num1 := num1 + 1;
+END LOOP;
+
+END;
+/
+
+-- 21. While loop
+
+-- print numbers from 10 to 50
+
+DECLARE
+start1 NUMBER := &start1;
+end1 NUMBER := &end1;
+
+BEGIN
+WHILE start1 <= end1 LOOP
+DBMS_OUTPUT.PUT_LINE(start1);
+start1 := start1 + 1;
+END LOOP;
+
+END;
+/
+
+-- 22. Using while loop display odd numbers
+
+DECLARE
+start1 NUMBER := &start1;
+end1 NUMBER := end1;
+checker NUMBER := 0;
+
+BEGIN
+IF mod(start1,2) = 1 THEN
+    checker := checker + 1;
+END IF;
+
+IF checker = 1 THEN
+    WHILE start1 <= end1 LOOP
+        DBMS_OUTPUT.PUT_LINE(start1);
+        start1 := start1 + 2;
+    END LOOP;
+ELSE 
+    start1 := start1 + 1;
+    WHILE start1 <= end1 LOOP
+        DBMS_OUTPUT.PUT_LINE(start1);
+        start1 := start1 + 2;
+    END LOOP
+END IF;
+
+END;
+/
+
+-- 23. using for loop print number from 20 to 30
+
+DECLARE
+num1 NUMBER;
+start1 NUMBER := &start1;
+end1 NUMBER := &end1;
+
+BEGIN
+FOR num1 IN start1..end1 LOOP
+    DBMS_OUTPUT.PUT_LINE(num1);
+END LOOP;
+
+END;
+/
+
+-- 24. print number from 10 to 20 in reverse
+
+DECLARE
+num1 NUMBER;
+start1 NUMBER := &start1;
+end1 NUMBER := 7end1;
+
+BEGIN
+FOR num1 in REVERSE start1..end1 LOOP
+    DBMS_OUTPUT.PUT_LINE(num1);
+END LOOP;
+
+END;
+/
+
+-- 25. create a procedure to greet user
+
+CREATE OR REPLACE PROCEDURE greetUser(name IN VARCHAR(20), greet OUT VARCHAR(30)) IS
+BEGIN
+greet := ('Hello'|| name);
+END;
+/
+
+DECLARE
+name VARCHAR(20) := 'Jigar';
+greet VARCHAR(30) := '';
+
+BEGIN
+greetUser(name,greet);
+DBMS_OUTPUT.PUT_LINE(result);
+
+END;
+/
+
+-- 26. find factorial using procedure
+
+CREATE OR REPLACE PROCEDURE factorial(num1 IN NUMBER, factorial OUT NUMBER) IS
+num2 NUMBER;
+fact NUMBER := 1;
+BEGIN
+FOR num2 IN REVERSE 1..num1 LOOP
+    fact := fact * num2;
+END LOOP;
+factorial := fact;
+END;
+/
+
+DECLARE 
+num1 NUMBER := &num1;
+factorial NUMBER := 1;
+
+BEGIN
+factorial(num1, factorial);
+DBMS_OUTPUT.PUT_LINE('Factorila of' || num1 || ' is ' || factorial);
+
+END;
+/
+
+-- 27 create a procedure to calculate sum of first n natural numbers
+
+CREATE OR REPLACE PROCEDURE sumOf(num1 IN NUMBER, sum1 OUT NUMBER) IS
+num2 NUMBER;
+sum2 NUMBER := 0;
+
+BEGIN
+FOR num2 IN 1..num1 LOOP
+    sum2 := sum2 + num2;
+END LOOP;
+sum1 := sum2;
+
+END;
+/
+
+DECLARE
+num1 NUMBER := &num1;
+sum1 NUMBER := 0;
+
+BEGIN
+sumOf(num1,sum1);
+DBMS_OUTPUT.PUT_LINE('Addition of first ' || num1 || 'natural numbers is' || sum1);
+
+END;
+/
+
+-- 28. create a procedure to find whether the given number is prime or not
+
+CREATE OR REPLACE PROCEDURE primeIs(num1 IN NUMBER, is_prime OUT BOOLEAN) IS
+i NUMBER;
+
+BEGIN
+is_prime := TRUE;
+
+IF num1 < 2 THEN
+    is_prime := FALSE;
+ELSE
+    FOR i IN 2..TRUNC(SQRT(num1)) THEN
+        IF mod(num1, i) = 0 THEN
+            is_prime := FALSE;
+            EXIT;
+        END IF;
+    END LOOP;
+END IF;
+
+END;
+/
+
+DECLARE
+num1 NUMBER := &num1;
+is_prime BOOLEAN := TRUE;
+
+BEGIN
+primeIs(num1, is_prime);
+IF is_prime = TRUE THEN
+    DBMS_OUTPUT.PUT_LINE(num1 || 'is a prime number');
+ELSE
+    DBMS_OUTPUT.PUT_LINE(num1 || 'is not a prime number');
+END IF;
+
+END;
+/
+
+-- 29. create a procedure to find the largest of 3 numbers
+
+CREATE OR REPLACE PROCEDURE greatOfThree(num1 IN NUMBER, num2 IN NUMBER, num3 IN NUMBER, num01 OUT NUMBER) IS
+BEGIN
+IF num1 > num2 AND num1 > num3 THEN
+    num01 := num1;
+ELSIF num2 > num1 AND num2 > num3 THEN
+    num01 := num2;
+ELSIF num3 > num1 AND num3 > num2 THEN
+    num01 := num3;
+ELSIF num1 = num2 AND num1 = num3 THEN
+    DBMS_OUTPUT.PUT_LINE('All the numbers are equal');
+ELSIF num1 = num2 AND num2 > num3 THEN
+    DBMS_OUTPUT.PUT_LINE('There are 2 big numbers' || num1 || 'and' || num2);
+ELSIF num1 = num3 AND num1 > num2 THEN
+    DBMS_OUTPUT.PUT_LINE('There are 2 big numbers' || num1 || 'and' || num3);
+ELSIF num3 = num2 AND num2 > num1 THEN
+    DBMS_OUTPUT.PUT_LINE('There are 2 big numbers' || num2 || 'and' || num3);
+ELSE
+    EXIT
+END IF;
+
+END;
+/
+
+DECLARE
+num1 NUMBER := &num1;
+num2 NUMBER := &num2;
+num3 NUMBER := &num3;
+greatest NUMBER
+
+BEGIN
+greatofThree(num1, num2, num3, greatest);
+IF greatest IS NOT NULL THEN
+    DBMS_OUTPUT.PUT_LINE(greatest || 'is the greatest among three numbers');
+END IF;
+
+END;
+/
+
+-- 30. fiboncci series
+
+CREATE OR REPLACE PROCEDURE fibonacciS(limit IN NUMBER) IS
+num1 NUMBER;
+num2 NUMBER;
+next_num NUMBER;
+i NUMBER;
+
+BEGIN
+num1 := 0;
+num2 := 1;
+DBMS_OUTPUT.PUT_LINE(num1);
+DBMS_OUTPUT.PUT_LINE(num2);
+
+FOR i IN 3..limit LOOP
+    next_num := num1 + num2;
+    DBMS_OUTPUT.PUT_LINE(next_num);
+    num1 := num2;
+    num2 := next_num;
+END LOOP;
+ 
+END;
+/
+
+DECLARE
+limit1 NUMBER := &limit;
+
+BEGIN
+fibonacciS(limit1);
+ 
+END;
+/
+
+-- 31 function to reverse a string
+
+CREATE OR REPLACE FUNCTION rev(str IN VARCHAR(20), rev_str OUT VARCHAR(20)) RETURN NUMBER IS
+i NUMBER;
+BEGIN
+
+rev_str := '';
+FOR i in REVERSE 1..LENGTH(str) LOOP
+    rev_str := rev_str || SUBSTR(str,i,1);
+END LOOP;
+
+RETURN 1;
+
+END;
+/
+
+DECLARE
+str VARCHAR(20) := &str;
+rev_str VARCHAR(20);
+result NUMBER;
+
+BEGIN
+result := rev(str, rev_str);
+DBMS_OUTPUT.PUT_LINE('Your string in reversed order is' || rev_str);
+
+END;
+/
+
+-- 32 Check whether the given string is a palindrome or not
+
+CREATE OR REPLACE FUNCTION checkPal(str IN VARCHAR(20)) RETURN BOOLEAN IS
+i NUMBER;
+rev_str VARCHAR(20);
+
+BEGIN
+rev_str := '';
+FOR i IN REVERSE 1..LENGTH(str) LOOP
+    rev_str := rev_str || SUBSTR(str, i, 1);
+END LOOP;
+
+IF str = rev_str THEN
+    RETURN TRUE;
+ELSE
+    RETURN FALSE;
+END IF;
+
+END;
+/
+
+DECLARE
+str VARCHAR(20) := &str;
+result BOOLEAN;
+
+BEGIN
+result := checkPal(str);
+IF result = TRUE THEN
+    DBMS_OUTPUT.PUT_LINE(str || 'is a palindrome');
+ELSE
+    DBMS_OUTPUT.PUT_LINE(str || 'is not a palindrome');
+END IF;
+
+END;
+/
+
+-- 33 Create a function to check wheteher the given number is an armstrong number
+
+CREATE OR REPLACE FUNCTION arm(num IN NUMBER) RETURN BOOLEAN IS
+digit NUMBER;
+sumOfPowers NUMBER := 0;
+len_digit NUMBER;
+original_num NUMBER;
+
+BEGIN
+len_digit := LENGTH(TO_CHAR(num));
+original_num := num;
+
+WHILE num > 0 LOOP
+    digit := MOD(num, 10);
+    sumOfPowers := sumOfPowers + POWER(digit, len_digit);
+    num := FLOOR(num/10);
+END LOOP;
+
+IF sumOfPowers = original_num THEN
+    RETURN TRUE;
+ELSE
+    RETURN FALSE;
+END IF;
+
+END;
+/
+
+DECLARE 
+num NUMBER := &num;
+result BOOLEAN;
+
+BEGIN
+result := arm(num);
+IF result THEN
+    DBMS_OUTPUT.PUT_LINE(num || 'is an armstrong number');
+ELSE
+    DBMS_OUTPUT.PUT_LINE(num || 'is not an armstrong number');
+END IF;
+
+END;
+/
+
+-- 34 sum of digits from a single input
+
+DECLARE
+num1 NUMBER := 1234;
+sumOfNumbers NUMBER := 0;
+digit NUMBER;
+
+BEGIN
+WHILE num1 > 0 LOOP
+    digit := mod(num1, 10);
+    sumOfNumbers := sumOfNumbers + digit;
+    num1 := FLOOR(num1/10)
+END LOOP;
+
+DBMS_OUTPUT.PUT_LINE('Sum of the given number is' || sumOfNumbers);
+
+END;
+/
+
+-- 35 reverse a number
+
+DECLARE
+num1 NUMBER := 1234;
+reverseNumber NUMBER := 0;
+digit NUMBER;
+
+BEGIN
+
+WHILE num1 > 0 LOOP
+    digit := mod(num1, 10);
+    reverseNumber := reverseNumber * 10 + digit;
+    num1 := FLOOR(num/10);
+END LOOP;
+
+DBMS_OUTPUT.PUT_LINE('The reversed number is' || reverseNumber);
+
+END;
+/
+
